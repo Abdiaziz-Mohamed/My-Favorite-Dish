@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_5sdp">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+    <!--The "tools" param is used to show the text only in the designing viewit will not be displayed once you run the app.-->
+
+        -<FrameLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_dish_image"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_width="match_parent"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/image_contentDescription"
+            android:layout_margin="@dimen/_1sdp"
+            />
+
+        <ImageButton
+            android:id="@+id/ib_more"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_more"
+            android:contentDescription="@string/image_contentDescription"
+            android:layout_margin="@dimen/_5sdp"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:background="@android:color/transparent"
+            android:layout_gravity="top|end"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_dish_title"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/_10sdp"
+        tools:text="Dish Title"
+        android:textStyle="bold"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@color/grey_900"
+        android:gravity="center_vertical"/>
+
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>
